@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MultithreaClassSample
+namespace MultithreadClassSample
 {
 	/// <summary>
 	/// 擬似スレッド風クラスです。
+	/// UI処理をブロックしないメソッド実行のメンバを提供します。
 	/// スレッドセーフではないので、1インスタンス1メソッドの実行を行なって下さい。
 	/// またこのクラスをスレッド呼び出しする検証は行っていません。
 	/// </summary>

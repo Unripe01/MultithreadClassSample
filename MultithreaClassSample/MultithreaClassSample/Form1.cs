@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace MultithreaClassSample
+namespace MultithreadClassSample
 {
 	public partial class frm1 : Form
 	{

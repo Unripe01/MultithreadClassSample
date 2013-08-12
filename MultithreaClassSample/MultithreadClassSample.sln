@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultithreaClassSample", "MultithreaClassSample\MultithreaClassSample.csproj", "{1A35228D-85D9-4803-818D-1FD1EBD9B6CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultithreadClassSample", "MultithreaClassSample\MultithreadClassSample.csproj", "{1A35228D-85D9-4803-818D-1FD1EBD9B6CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
