@@ -162,7 +162,7 @@ namespace MultithreadClassSample
 			var tl = new ThreadLike();
 
 			//Actionが終わるまでこの行で止まる
-			tl.WaitBackgroundAction( 
+			tl.WaitBackgroundWork( 
 				() =>{this.ThreadSleep();}
 			);
 
@@ -178,7 +178,7 @@ namespace MultithreadClassSample
 			var tl = new ThreadLike();
 
 			//Funcが終わるまでこの行で止まる
-			var result = tl.WaitBackgroundAction<string>(
+			var result = tl.WaitBackgroundWork<string>(
 				() => {
 					this.ThreadSleep();
 					throw new ApplicationException( "エラーが！" );

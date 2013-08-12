@@ -46,7 +46,7 @@ namespace MultithreadClassSample
 		/// Actionが完了するまでステートメントをブロックしますがUIコンテキストが止まることはありません。
 		/// ActionにはUIスレッドを操作するロジックは実装しないでください。
 		/// </summary>
-		public void WaitBackgroundAction( Action action )
+		public void WaitBackgroundWork( Action action )
 		{
 			System.Threading.Tasks.Task t = System.Threading.Tasks.Task.Factory.StartNew(
 			() =>
@@ -79,7 +79,7 @@ namespace MultithreadClassSample
 		/// Funcが完了するまでステートメントをブロックしますがUIコンテキストが止まることはありません。
 		/// FuncにはUIスレッドを操作するロジックは実装しないでください。
 		/// </summary>
-		public T WaitBackgroundAction<T>( Func<T> function ) 
+		public T WaitBackgroundWork<T>( Func<T> function ) 
 		{
 			T temp = default(T);
 			System.Threading.Tasks.Task t = System.Threading.Tasks.Task.Factory.StartNew(
