@@ -1,4 +1,4 @@
-﻿namespace MultithreaClassSample
+﻿namespace MultithreadClassSample
 {
 	partial class frm1
 	{
