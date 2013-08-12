@@ -191,9 +191,9 @@ namespace MultithreadClassSample
 			MessageBox.Show( result );
 
 			//スレッド内で例外があったか？
-			if( tl.OccurredException != null )
+			if( tl.ExceptionOccurred != null )
 			{
-				MessageBox.Show( tl.OccurredException.Message );
+				MessageBox.Show( tl.ExceptionOccurred.Message );
 			}
 
 		}

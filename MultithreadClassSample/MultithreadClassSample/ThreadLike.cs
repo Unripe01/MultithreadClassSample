@@ -15,8 +15,9 @@ namespace MultithreadClassSample
 	{
 		/// <summary>
 		/// 例外の存在有無
+		/// 実行スレッド内で例外が発生した場合trueを返します
 		/// </summary>
-		public bool IsError;
+		public bool IsError {get {return ExceptionOccurred != null ;}}
 
 		/// <summary>指定されたActionの完了確認</summary>
 		private bool EventCompleted;
@@ -24,15 +25,15 @@ namespace MultithreadClassSample
 		/// <summary>
 		/// スレッドプールで実行したActionが発生した例外
 		/// </summary>
-		public Exception OccurredException { get; private set; }
+		public Exception ExceptionOccurred { get; private set; }
 
 		/// <summary>
 		/// 初期化
 		/// </summary>
 		private void Init()
 		{
-			IsError = false;
 			EventCompleted = false;
+			ExceptionOccurred = null;
 		}
 
 		public ThreadLike()
@@ -53,8 +54,7 @@ namespace MultithreadClassSample
 				try { action(); }
 				catch( Exception exception )
 				{
-					this.IsError  = true;
-					this.OccurredException = exception;
+					this.ExceptionOccurred = exception;
 				}
 				finally
 				{
@@ -88,8 +88,7 @@ namespace MultithreadClassSample
 				try{temp = function();}
 				catch( Exception exception )
 				{
-					this.IsError  = true;
-					this.OccurredException = exception;
+					this.ExceptionOccurred = exception;
 				}
 				finally
 				{
